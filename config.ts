@@ -1,9 +1,10 @@
-type config = {
+const config: Object = {
 	env: process.env.NODE_ENV || 'development',
 	spotify: {
-		client: process.env.SPOTIFY_API_CLIENT,
-		secret: process.env.SPOTIFY_API_SECRET,
-	}
+		client: process.env.SPOTIFY_CLIENT_ID,
+		secret: process.env.SPOTIFY_CLIENT_SECRET,
+	},
+	port: process.env.PORT,
 }
 
-module.exports = config;
+export default config;

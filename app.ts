@@ -1,5 +1,4 @@
-const NewServer = require('../server');
-const Logger = require('../logger');
+import { Logger, Winston } from './logger';
 
-const server = NewServer(process.env.PORT, Logger);
-
+const logger = new Logger(Winston);
+logger.info('Logger created');
